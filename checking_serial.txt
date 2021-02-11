@@ -1,0 +1,75 @@
+registration of superuser #api.add_resource(UserRegistration,'/registration')
+Get all business #api.add_resource(ZbusinessList,'/businessId')
+Allow usable business Id #api.add_resource(Vbusiness,'/validate_business')
+Get validated business #api.add_resource(Vbusiness,'/validate_business')
+Get Non approved Business #api.add_resource(VbusinessNonapproved,'/nonapprovedbusiness')
+superuser logout api.add_resource(UserLogout,'/logout')
+check if employee code is coming #api.add_resource(EmployeeCodeList,'/employeeCode/<int:businessId>')
+registrtion of Admin #api.add_resource(UserRegistration,'/registration')
+category approval by admin #api.add_resource(CaitemProductCategoryAdd,'/itemcategoryadd/<int:businessId>')
+check all category updates #api.add_resource(CaitemProductCategory,'/itemcategory')
+check if you can delete a category #api.add_resource(CaitemProductCategoryDelete,'/itemcategorydelete/<int:businessId>/<string:approvedCategory>')
+register regular user with wrong is_admin value check #api.add_resource(UserRegistration,'/registration')
+logout 
+login as admin
+set hierarchy and activate user #api.add_resource(Hierarchy,'/hierarchy')
+Test delete hierarchy #api.add_resource(HierarchyDelete,'/hierarchyDelete/<string:username>')
+logout and sign in as regular user
+check if products are coming in #api.add_resource(CaitemList,'/products')
+check product row count #api.add_resource(CaitemRowCount,'/itemrowcount')
+check if customers are coming in #api.add_resource(CacusList,'/customers')
+check customer row count #api.add_resource(CacusRowCount,'/customerowcount')
+place order as regular salesman #api.add_resource(Opmob,'/order')
+
+
+
+
+
+#resources for super user function
+
+api.add_resource(VbusinessDelete,'/delete_business/<int:business_Id>')
+api.add_resource(VbusinessNonapproved,'/nonapprovedbusiness')
+
+
+#resources for admin function
+
+
+api.add_resource(HierarchyNonparent,'/hierarchynonparent')
+api.add_resource(HierarchyParent,'/hierarchyparent')
+
+#resources for location function
+api.add_resource(LocationUpdate,'/location')
+
+#resources for customer function
+api.add_resource(Cacus,'/customer/<int:businessId>/<string:customerId>')
+
+
+
+#resources for product function
+api.add_resource(Caitem,'/product/<int:businessId>/<string:productCode>')
+
+
+api.add_resource(CaitemProductCategory,'/itemcategory')
+
+
+#resources for mobile orders #this uses request.json in order to accept lists
+
+api.add_resource(OpmobDelete,'/orderdelete/<string:invoiceno>')
+api.add_resource(OpmobConfirmed,'/orderconfirmed')
+api.add_resource(OpmobNotConfirmed, '/ordernotconfirmed')
+
+
+#resources for user registration and login function
+
+api.add_resource(UserLogin,'/login')
+
+api.add_resource(TokenRefresh,'/token/refresh')
+api.add_resource(AccessFreshToken,'/token/fresh')
+api.add_resource(UpdateUser,'/updateuser')
+
+api.add_resource(VbusinessRegular,'/validate_business_regular')
+api.add_resource(UserDelete, '/userdelete/<string:username>')
+
+#user according to status
+api.add_resource(UserStatusActive,'/userstatusactive')
+api.add_resource(UserStatusInactive,'/userstatusinactive')

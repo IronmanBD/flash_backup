@@ -1,0 +1,571 @@
+supervisor: couldn't chdir to /root/flask_api/: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /root/flask_api/: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /root/flask_api/: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't chdir to /root/flask_api/: EACCES
+supervisor: child process was not spawned
+Error: 
+Unable to load celery application.
+'flask' object has no attribute 'user_options'
+
+Error: 
+Unable to load celery application.
+'flask' object has no attribute 'user_options'
+
+Error: 
+Unable to load celery application.
+'flask' object has no attribute 'user_options'
+
+Error: 
+Unable to load celery application.
+'flask' object has no attribute 'user_options'
+
+[2021-02-08 09:23:07,208: INFO/MainProcess] beat: Starting...
+celery beat v4.4.5 (cliffs) is starting.
+__    -    ... __   -        _
+LocalTime -> 2021-02-08 09:23:07
+Configuration ->
+    . broker -> redis://localhost:6379//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> celerybeat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 minutes (300s)
+Traceback (most recent call last):
+  File "/root/my_env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/root/my_env/lib/python3.6/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 289, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 509, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 531, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/root/my_env/lib/python3.6/site-packages/celery/app/utils.py", line 373, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 534, in symbol_by_name
+    return imports.symbol_by_name(name, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/kombu/utils/imports.py", line 57, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/root/my_env/lib/python3.6/site-packages/celery/utils/imports.py", line 111, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/flask_api/celery_worker.py", line 1, in <module>
+    from app import celery
+  File "/root/flask_api/app/__init__.py", line 12, in <module>
+    'schedule': timedelta(seconds=10800),
+NameError: name 'timedelta' is not defined
+Traceback (most recent call last):
+  File "/root/my_env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/root/my_env/lib/python3.6/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 289, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 509, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 531, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/root/my_env/lib/python3.6/site-packages/celery/app/utils.py", line 373, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 534, in symbol_by_name
+    return imports.symbol_by_name(name, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/kombu/utils/imports.py", line 57, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/root/my_env/lib/python3.6/site-packages/celery/utils/imports.py", line 111, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/flask_api/celery_worker.py", line 1, in <module>
+    from app import celery
+  File "/root/flask_api/app/__init__.py", line 12, in <module>
+    'schedule': timedelta(seconds=10800),
+NameError: name 'timedelta' is not defined
+Traceback (most recent call last):
+  File "/root/my_env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/root/my_env/lib/python3.6/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 289, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 509, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 531, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/root/my_env/lib/python3.6/site-packages/celery/app/utils.py", line 373, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 534, in symbol_by_name
+    return imports.symbol_by_name(name, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/kombu/utils/imports.py", line 57, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/root/my_env/lib/python3.6/site-packages/celery/utils/imports.py", line 111, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/flask_api/celery_worker.py", line 1, in <module>
+    from app import celery
+  File "/root/flask_api/app/__init__.py", line 12, in <module>
+    'schedule': timedelta(seconds=10800),
+NameError: name 'timedelta' is not defined
+Traceback (most recent call last):
+  File "/root/my_env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/root/my_env/lib/python3.6/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 289, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 509, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 531, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/root/my_env/lib/python3.6/site-packages/celery/app/utils.py", line 373, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 534, in symbol_by_name
+    return imports.symbol_by_name(name, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/kombu/utils/imports.py", line 57, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/root/my_env/lib/python3.6/site-packages/celery/utils/imports.py", line 111, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/flask_api/celery_worker.py", line 1, in <module>
+    from app import celery
+  File "/root/flask_api/app/__init__.py", line 12, in <module>
+    'schedule': timedelta(seconds=10800),
+NameError: name 'timedelta' is not defined
+Traceback (most recent call last):
+  File "/root/my_env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/root/my_env/lib/python3.6/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 289, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 509, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 531, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/root/my_env/lib/python3.6/site-packages/celery/app/utils.py", line 373, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 534, in symbol_by_name
+    return imports.symbol_by_name(name, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/kombu/utils/imports.py", line 57, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/root/my_env/lib/python3.6/site-packages/celery/utils/imports.py", line 111, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/flask_api/celery_worker.py", line 1, in <module>
+    from app import celery
+  File "/root/flask_api/app/__init__.py", line 12, in <module>
+    'schedule': timedelta(seconds=10800),
+NameError: name 'timedelta' is not defined
+Traceback (most recent call last):
+  File "/root/my_env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/root/my_env/lib/python3.6/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 289, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 509, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 531, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/root/my_env/lib/python3.6/site-packages/celery/app/utils.py", line 373, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 534, in symbol_by_name
+    return imports.symbol_by_name(name, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/kombu/utils/imports.py", line 57, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/root/my_env/lib/python3.6/site-packages/celery/utils/imports.py", line 111, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/flask_api/celery_worker.py", line 1, in <module>
+    from app import celery
+  File "/root/flask_api/app/__init__.py", line 12, in <module>
+    'schedule': timedelta(seconds=10800),
+NameError: name 'timedelta' is not defined
+Traceback (most recent call last):
+  File "/root/my_env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/root/my_env/lib/python3.6/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 289, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 509, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 531, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/root/my_env/lib/python3.6/site-packages/celery/app/utils.py", line 373, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 534, in symbol_by_name
+    return imports.symbol_by_name(name, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/kombu/utils/imports.py", line 57, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/root/my_env/lib/python3.6/site-packages/celery/utils/imports.py", line 111, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/flask_api/celery_worker.py", line 1, in <module>
+    from app import celery
+  File "/root/flask_api/app/__init__.py", line 12, in <module>
+    'schedule': timedelta(seconds=10800),
+NameError: name 'timedelta' is not defined
+Traceback (most recent call last):
+  File "/root/my_env/bin/celery", line 11, in <module>
+    sys.exit(main())
+  File "/root/my_env/lib/python3.6/site-packages/celery/__main__.py", line 16, in main
+    _main()
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 322, in main
+    cmd.execute_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/celery.py", line 495, in execute_from_commandline
+    super(CeleryCommand, self).execute_from_commandline(argv)))
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 289, in execute_from_commandline
+    argv = self.setup_app_from_commandline(argv)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 509, in setup_app_from_commandline
+    self.app = self.find_app(app)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 531, in find_app
+    return find_app(app, symbol_by_name=self.symbol_by_name)
+  File "/root/my_env/lib/python3.6/site-packages/celery/app/utils.py", line 373, in find_app
+    sym = symbol_by_name(app, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/celery/bin/base.py", line 534, in symbol_by_name
+    return imports.symbol_by_name(name, imp=imp)
+  File "/root/my_env/lib/python3.6/site-packages/kombu/utils/imports.py", line 57, in symbol_by_name
+    module = imp(module_name, package=package, **kwargs)
+  File "/root/my_env/lib/python3.6/site-packages/celery/utils/imports.py", line 111, in import_from_cwd
+    return imp(module, package=package)
+  File "/usr/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/root/flask_api/celery_worker.py", line 1, in <module>
+    from app import celery
+  File "/root/flask_api/app/__init__.py", line 12, in <module>
+    'schedule': timedelta(seconds=10800),
+NameError: name 'timedelta' is not defined
+[2021-02-08 09:51:17,408: INFO/MainProcess] beat: Starting...
+celery beat v4.4.5 (cliffs) is starting.
+__    -    ... __   -        _
+LocalTime -> 2021-02-08 09:51:17
+Configuration ->
+    . broker -> redis://localhost:6379//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> celerybeat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 minutes (300s)
+[2021-02-08 10:02:01,094: INFO/MainProcess] beat: Starting...
+[2021-02-08 10:02:01,129: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 10:03:01,132: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 10:04:01,182: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+celery beat v4.4.5 (cliffs) is starting.
+__    -    ... __   -        _
+LocalTime -> 2021-02-08 10:02:01
+Configuration ->
+    . broker -> redis://localhost:6379//
+    . loader -> celery.loaders.app.AppLoader
+    . scheduler -> celery.beat.PersistentScheduler
+    . db -> celerybeat-schedule
+    . logfile -> [stderr]@%INFO
+    . maxinterval -> 5.00 minutes (300s)
+[2021-02-08 10:08:57,871: INFO/MainProcess] beat: Starting...
+[2021-02-08 10:24:01,190: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 10:44:01,285: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 11:04:01,383: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 11:24:01,448: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 11:44:01,485: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 12:04:01,551: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 12:24:01,653: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 12:44:01,707: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 13:04:01,872: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 13:24:01,896: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 13:44:01,978: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 14:04:01,997: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 14:24:02,091: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 14:44:02,124: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 15:04:02,176: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 15:24:02,266: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 15:44:02,406: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 16:04:02,490: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 16:24:02,548: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 16:44:02,649: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 17:04:02,682: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 17:24:02,693: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 17:44:02,763: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 18:04:02,923: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 18:24:03,026: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 18:44:03,161: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 19:04:03,193: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 19:24:03,299: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 19:44:03,313: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 20:04:03,409: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 20:24:03,513: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 20:44:03,618: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 21:04:03,643: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 21:24:03,727: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 21:44:04,029: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 22:04:04,118: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 22:24:04,216: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 22:44:04,291: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 23:04:04,400: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 23:24:04,451: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-08 23:44:04,524: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 00:04:04,525: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 00:24:04,537: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 00:44:04,623: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 01:04:04,739: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 01:24:04,843: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 01:44:04,977: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 02:04:05,155: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 02:24:05,280: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 02:44:05,339: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 03:04:05,489: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 03:24:05,557: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 03:44:05,694: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 04:00:00,001: INFO/MainProcess] Scheduler: Sending due task celery.backend_cleanup (celery.backend_cleanup)
+[2021-02-09 04:04:05,731: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 04:24:05,833: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 04:44:05,853: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 05:04:05,953: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 05:24:06,028: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 05:44:06,065: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 06:04:06,136: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 06:24:06,225: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 06:44:06,326: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 07:04:06,460: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 07:24:06,480: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 07:44:06,551: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 08:04:06,650: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 08:24:06,754: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 08:44:06,873: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 09:04:06,952: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 09:24:07,053: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 09:44:07,161: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 10:04:07,213: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 10:24:07,305: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 10:44:07,398: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 11:04:07,514: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 11:24:07,611: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 11:44:07,726: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 12:04:07,833: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 12:24:07,934: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 12:44:08,069: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 13:04:08,087: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 13:24:08,171: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 13:44:08,248: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 14:04:08,344: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 14:24:08,447: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 14:44:08,480: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 15:04:08,588: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 15:24:08,689: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 15:44:08,863: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 16:04:09,038: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 16:24:09,117: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 16:44:09,216: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 17:04:09,313: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 17:24:09,358: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 17:44:09,420: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 18:04:09,468: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 18:24:09,623: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 18:44:09,720: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 19:04:09,798: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 19:24:09,899: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 19:44:10,014: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 20:04:10,014: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 20:24:10,145: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 20:44:10,190: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 21:04:10,222: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 21:24:10,323: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 21:44:10,392: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 22:04:10,495: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 22:24:10,549: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 22:44:10,650: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 23:04:10,716: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 23:24:10,808: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-09 23:44:10,818: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 00:04:10,872: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 00:24:10,956: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 00:44:10,990: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 01:04:11,046: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 01:24:11,077: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 01:44:11,148: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 02:04:11,182: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 02:24:11,280: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 02:44:11,413: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 03:04:11,462: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 03:24:11,565: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 03:44:11,652: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 04:00:00,010: INFO/MainProcess] Scheduler: Sending due task celery.backend_cleanup (celery.backend_cleanup)
+[2021-02-10 04:04:11,754: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 04:24:11,755: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 04:44:11,856: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 05:04:12,111: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 05:24:12,174: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 05:44:12,195: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 06:04:12,297: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 06:24:12,439: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 06:44:12,503: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 07:04:12,600: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 07:24:12,656: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 07:44:12,751: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 08:04:12,845: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 08:24:12,898: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 08:44:13,003: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 09:04:13,086: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 09:24:13,128: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 09:44:13,142: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 10:04:13,170: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 10:24:13,243: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 10:44:13,328: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 11:04:13,426: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 11:24:13,515: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 11:44:13,549: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 12:04:13,612: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 12:24:13,625: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 12:44:13,735: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 13:04:13,842: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 13:24:13,907: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 13:44:13,919: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 14:04:14,019: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 14:24:14,123: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 14:44:14,224: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 15:04:14,307: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 15:24:14,318: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 15:44:14,405: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 16:04:14,423: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 16:24:14,526: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 16:44:14,576: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 17:04:14,595: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 17:24:14,670: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 17:44:14,769: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 18:04:14,806: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 18:24:14,909: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 18:44:14,972: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 19:04:14,983: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 19:24:15,073: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 19:44:15,105: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 20:04:15,124: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 20:24:15,289: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 20:44:15,379: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 21:04:15,548: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 21:24:15,781: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 21:44:15,798: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 22:04:15,969: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 22:24:16,031: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 22:44:16,082: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 23:04:16,089: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 23:24:16,191: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-10 23:44:16,201: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 00:04:16,259: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 00:24:16,289: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 00:44:16,388: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 01:04:16,464: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 01:24:16,528: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 01:44:16,554: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 02:04:16,645: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 02:24:16,684: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 02:44:16,719: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 03:04:16,733: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 03:24:16,817: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 03:44:16,916: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 04:00:00,033: INFO/MainProcess] Scheduler: Sending due task celery.backend_cleanup (celery.backend_cleanup)
+[2021-02-11 04:04:17,017: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 04:24:17,128: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 04:44:17,228: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 05:04:17,345: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 05:24:17,445: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 05:44:17,548: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 06:04:17,649: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 06:24:17,754: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 06:44:17,866: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 07:04:17,987: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 07:24:18,091: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 07:44:18,158: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 08:04:18,259: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 08:24:18,363: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 08:44:18,420: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 09:04:18,520: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 09:24:18,676: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 09:44:18,776: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 10:04:18,877: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 10:24:18,923: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 10:44:19,068: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
+[2021-02-11 11:04:19,189: INFO/MainProcess] Scheduler: Sending due task app.tasks.periodic_run_get_manifest (app.tasks.periodic_run_get_manifest)
